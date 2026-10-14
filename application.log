@@ -1,0 +1,26 @@
+ポート 8000番 でサーバーが動いています。
+[Fri Oct 02 2026 12:36:57 GMT+0900 (日本標準時)] サーバーエラー Error: listen EADDRINUSE: address already in use :::8000
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at Server.listen (node:net:2102:7)
+    at Object.<anonymous> (/app/index.js:21:8)
+    at Module._compile (node:internal/modules/cjs/loader:1706:14)
+    at Object..js (node:internal/modules/cjs/loader:1839:10)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '::',
+  port: 8000
+}
+[Fri Oct 02 2026 12:37:46 GMT+0900 (日本標準時)] ::ffff:192.168.65.1 からアクセスがありました。
+[Fri Oct 02 2026 12:37:47 GMT+0900 (日本標準時)] ::ffff:192.168.65.1 からアクセスがありました。
+[Fri Oct 02 2026 12:38:33 GMT+0900 (日本標準時)] ::ffff:192.168.65.1 からアクセスがありました。
+[Fri Oct 02 2026 12:38:33 GMT+0900 (日本標準時)] ::ffff:192.168.65.1 からアクセスがありました。
+[Fri Oct 02 2026 12:38:34 GMT+0900 (日本標準時)] ::ffff:192.168.65.1 からアクセスがありました。
+[Fri Oct 02 2026 12:38:34 GMT+0900 (日本標準時)] ::ffff:192.168.65.1 からアクセスがありました。
+[Fri Oct 02 2026 12:38:35 GMT+0900 (日本標準時)] ::ffff:192.168.65.1 からアクセスがありました。
+[Fri Oct 02 2026 12:38:35 GMT+0900 (日本標準時)] ::ffff:192.168.65.1 からアクセスがありました。
