@@ -4,7 +4,7 @@ const pug = require('pug');
 const server = http
   .createServer((req, res) => {
     const now = new  Date();
-    console.info(`[${now}] ${req.socket.remoteAddress} からアクセスがありました。`)
+    console.info(`${req.socket.remoteAddress} からアクセスがありました。`)
     res.writeHead(200, {
       'Content-Type': 'text/html; charset=utf-8'
     });
@@ -53,7 +53,7 @@ const server = http
             const name = answer.get('name');
             const favorite = answer.get('favorite');
             const body = `${name}さんは${favorite}に投票しました`;
-            console.info(`[${now}] ${body}`);
+            console.info(`${body}`);
             res.write(
               `<!DOCTYPE html><html lang="ja"><body><h1>${body}</h1></body></html>`
             )
@@ -65,12 +65,12 @@ const server = http
     }
   })
   .on('error', e => {
-    console.error(`[${new Date()}] サーバーエラー`, e);
+    console.error(`サーバーエラー`, e);
   })
   .on('clientError', e => {
-    console.error(`[${new Date()}] クライアントエラー`, e);
+    console.error(`クライアントエラー`, e);
   });
 const port = process.env.PORT || 8000;
 server.listen(port, () => {
-  console.log(`ポート ${port}番 でサーバーが動いています。`)
+  console.info(`ポート ${port}番 でサーバーが動いています。`)
 });
